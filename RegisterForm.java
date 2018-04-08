@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 public class RegisterForm extends javax.swing.JFrame {
 
     /**
-     * Creates new form RegisterForm
+     * Creates new form is for new User to register in the system
      */
     public RegisterForm() {
         initComponents();
