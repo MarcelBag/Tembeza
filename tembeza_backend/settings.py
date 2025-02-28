@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tembeza_db',
-        'USER': 'dbtembeza',
+        'USER': 'tembeza_db',
         'PASSWORD': 'marimar',
         'HOST': 'localhost',
         'PORT': '5432',
