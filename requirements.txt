@@ -210,7 +210,7 @@ ruamel.yaml @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/ru
 semver @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_85wxqx9al6/croot/semver_1736541329514/work
 Send2Trash @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/send2trash_1701803532643/work
 sentry-sdk @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_4dcc1avjs2/croot/sentry-sdk_1732198183579/work
-setuptools==68.2.2
+setuptools==70.0.0
 shellingham @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/shellingham_1699238695807/work
 sip @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/sip_1699238710791/work
 six @ file:///tmp/build/80754af9/six_1644875935023/work
