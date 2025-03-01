@@ -26,14 +26,24 @@ from django.urls import path
 
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
+    # Home page route (or a default landing page)
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+
+    # Frontend UI pages at the top level
+    path('signup/', TemplateView.as_view(template_name='signup.html'), name='signup'),
+    path('signin/', TemplateView.as_view(template_name='signin.html'), name='signin'),
+    path('map/', TemplateView.as_view(template_name='map.html'), name='map'),
+
     path('admin/', admin.site.urls),
-    path('api/', include('rides.urls')),  # Use 'rides.urls' if your app is at project root
-# JWT endpoints
+
+    # JWT endpoints
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    # Include the rides app URLs
+
+    # Include API endpoints from rides app – they will be available under /api/
     path('api/', include('rides.urls')),
 ]

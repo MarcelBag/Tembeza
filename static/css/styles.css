@@ -1,0 +1,25 @@
+/* static/css/styles.css */
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #333;
+}
