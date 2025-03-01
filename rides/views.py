@@ -5,6 +5,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import Ride
 from .serializers import RideSerializer
+from rest_framework.permissions import IsAuthenticated
 
 class RideListCreateAPIView(generics.ListCreateAPIView):
     """
@@ -12,6 +13,7 @@ class RideListCreateAPIView(generics.ListCreateAPIView):
     """
     queryset = Ride.objects.all().order_by('-created_at')
     serializer_class = RideSerializer
+    permission_classes = [IsAuthenticated]  # Only authenticated users can list/create rides
 
 class RideDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     """
@@ -19,3 +21,4 @@ class RideDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     """
     queryset = Ride.objects.all()
     serializer_class = RideSerializer
+    permission_classes = [IsAuthenticated]  # Only authenticated users can update/delete rides
