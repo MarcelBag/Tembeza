@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # Custom apps
     'rides',
+    'users'
 ]
 
 MIDDLEWARE = [
