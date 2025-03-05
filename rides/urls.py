@@ -3,7 +3,7 @@
 # rides/urls.py
 from django.urls import path
 from django.views.generic import TemplateView
-from .views import RideListCreateAPIView, RideDetailAPIView #, OSRMRouteView
+from .views import RideListCreateAPIView, RideDetailAPIView, signup, signin #, OSRMRouteView
 
 urlpatterns = [
     # API endpoints
@@ -15,4 +15,6 @@ urlpatterns = [
     path('signup/', TemplateView.as_view(template_name='signup.html'), name='signup'),
     path('signin/', TemplateView.as_view(template_name='signin.html'), name='signin'),
     path('map/', TemplateView.as_view(template_name='map.html'), name='map'),
+    path('signup/', signup, name='signup'),
+    path('signin/', signin, name='signin'),
 ]
