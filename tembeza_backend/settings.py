@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
-    'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     # Custom apps
     'rides',
@@ -145,6 +144,19 @@ BASE_DIR / "static",
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
+
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 AUTH_USER_MODEL = 'rides.CustomUser'
+
+# Add these settings for SimpleJWT
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'UPDATE_LAST_LOGIN': False,
+}
