@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework_simplejwt.token_blacklist',
     # Custom apps
-    'rides',
+    #'rides',
     'users'
 ]
 
