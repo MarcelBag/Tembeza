@@ -14,6 +14,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
+
 class RideListCreateAPIView(generics.ListCreateAPIView):
     """
     API view to retrieve the list of rides or create a new ride.
