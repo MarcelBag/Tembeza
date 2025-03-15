@@ -1,11 +1,14 @@
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import TemplateView
 from .views import RideListCreateAPIView, RideDetailAPIView, signup, signin
+
 
 urlpatterns = [
     # API endpoints (backend)
     path('api/rides/', RideListCreateAPIView.as_view(), name='ride-list-create'),  # Handles rides API
     path('api/rides/<int:pk>/', RideDetailAPIView.as_view(), name='ride-detail'),  # Handles single ride API
+
+    path('api/', include('rides.urls')),  # Include rides app URLs
 
     # Corrected: Explicitly separate API endpoints for signup/signin
     path('api/signup/', signup, name='api-signup'),  # Maps API signup to handle POST
