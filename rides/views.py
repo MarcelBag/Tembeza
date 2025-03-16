@@ -40,6 +40,9 @@ def signup(request):
     """
     API endpoint for user signup.
     """
+    print("DEBUG: signup view hit")  # This will log in the console if the view is accessed
+    print("DEBUG: request method ->", request.method)  # Log the request method
+    print("DEBUG: request data ->", request.data)  # Log the incoming request data
     # Extracting data from the POST request
     username = request.data.get('username')
     email = request.data.get('email')

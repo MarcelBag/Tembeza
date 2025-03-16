@@ -32,7 +32,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     # Home page route (or a default landing page)
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-
+    path('api/', include('rides.urls')),
     # Frontend UI pages at the top level
     path('signup/', TemplateView.as_view(template_name='signup.html'), name='signup'),
     path('signin/', TemplateView.as_view(template_name='signin.html'), name='signin'),
